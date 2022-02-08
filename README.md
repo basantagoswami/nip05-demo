@@ -1,6 +1,6 @@
 # Nostr NIP-05 Demo
 
-[Nostr](https://github.com/fiatjaf/nostr) is a protocol aimed at creating a censorship-resistant global "social" network. The NIP-01 (Nostr Implementation Possibility - 01) defines the basic protocol.
+[Nostr](https://github.com/fiatjaf/nostr) is a protocol aimed at creating a censorship-resistant global "social" network. The [NIP-01](https://github.com/fiatjaf/nostr/blob/master/nips/01.md) (Nostr Implementation Possibility - 01) defines the basic protocol.
 
 ## NIP-05
 
