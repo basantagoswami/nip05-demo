@@ -4,7 +4,7 @@
 
 ## NIP-05
 
-NIP-05 lets people map Nostr keys to DNS-based internet identifiers (think of email or lightning addresses). Use this repo with your own domain and hosting or with a free service like heroku
+NIP-05 lets people map Nostr keys to DNS-based internet identifiers (think of email or lightning addresses). Use this repo with your own domain and hosting or with a free service like heroku. This repo was made to be served using heroku.
 
 ## How to use this repo
 
