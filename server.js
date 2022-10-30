@@ -1,37 +1,39 @@
-const express = require('express');
+const express = require("express");
+const dotenv = require("dotenv");
+const path = require("path");
+
 const app = express();
-const dotenv = require('dotenv');
-dotenv.config()
-const path = require('path');
+dotenv.config();
 
+const port = +process.env.PORT || 5555;
+const pubkey = process.env.PUBKEY;
 
-/* names._ = domain.com
- * names.user = user@domain.com
- * Don't forget to change the 000s with your nostr pubkey
-*/
 const nostr = {
     "names": {
-        "_": "0000000000000000000000000000000000000000000000000000000000000000"
+        "_": pubkey
     }
-}
+};
 
-// Need CORS for your web client to be able to make requests to another website
-app.use((req, res, next) => {
+// Need CORS for nostr web clients to be able to make requests to this server
+app.use((_, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
 
-// Serve the json file required by nostr clients with NIP-05
-app.get('/.well-known/nostr.json', (req, res) => {
-    res.json(nostr);
-});
+app.set("views", path.join(__dirname, "public"));
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
 
-// Serve a webpage if you want to
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+// Serve the json file required by nostr clients with NIP-05
+app.get("/.well-known/nostr.json", (_, res) => {
+    res.json(nostr);
 })
 
-app.listen(process.env.PORT, () => {
-    console.log("App is running on ", process.env.PORT);
+app.get("/", (_, res) => {
+    res.render(path.join("index"), { pubkey });
+})
+
+app.listen(port, () => {
+    console.log("App is running on ", port);
 })

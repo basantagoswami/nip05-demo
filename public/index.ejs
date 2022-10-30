@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>NIP-05 Demo</title>
+        <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<main class="card">
+			<div id="title">Nostr Address Demo</div>
+            <br>
+			<div id="domain">Pubkey for <span id="domain">@</span> :</div>
+            <br>
+			<div id="pubkey"><%= pubkey %></div>
+		</main>
+		<script>
+			const domainDiv = document.querySelector("span#domain");
+			const domain = document.domain;
+			domainDiv.innerHTML += domain;
+		</script>
+	</body>
+</html>

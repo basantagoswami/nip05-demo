@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  flex-direction: column;
+  font-family: 'ubuntu';
+  font-size: 18px;
+  color: rgb(50, 50, 50);
+  justify-content: center;
+  padding: 60px 20px 40px 20px;
+}
+
+.card {
+  max-width: 400px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px 40px;
+  margin: 20px 0 20px;
+  border: 1px solid #999;
+}
+
+#title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+div#domain {
+  font-weight: 700;
+}
+
+span#domain {
+  font-style: italic;
+}
+
+#pubkey {
+  overflow-wrap: break-word;
+  width: 320px;
+  background: #f3f3f3;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #999999;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 20px 5px 30px 5px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
