@@ -9,4 +9,6 @@ NIP-05 lets people map nostr keys to DNS-based internet identifiers (think of em
 ## How to use this repo
 
 - Create an .env file similar to the .env.example file
-- Change the pubkey from 000s to your nostr pubkey
+- Change the pubkey from 0000s to your nostr pubkey
+- run ```npm ci``` to install the required packages 
+- run ```npm run start``` to start the server
