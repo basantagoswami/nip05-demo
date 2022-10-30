@@ -35,11 +35,11 @@ body {
   flex-direction: column;
 }
 
-div#domain {
+div#address {
   font-weight: 700;
 }
 
-span#domain {
+span#address {
   font-style: italic;
 }
 

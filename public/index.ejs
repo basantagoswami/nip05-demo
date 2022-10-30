@@ -11,14 +11,14 @@
 		<main class="card">
 			<div id="title">Nostr Address</div>
             <br>
-			<div id="domain">Pubkey for <span id="domain">@</span> :</div>
+			<div id="address">Pubkey for <span id="address"><%= username %>@</span> :</div>
             <br>
 			<div id="pubkey"><%= pubkey %></div>
 		</main>
 		<script>
-			const domainDiv = document.querySelector("span#domain");
+			const addressDiv = document.querySelector("span#address");
 			const domain = document.domain;
-			domainDiv.innerHTML += domain;
+			addressDiv.innerHTML += domain;
 		</script>
 	</body>
 </html>
